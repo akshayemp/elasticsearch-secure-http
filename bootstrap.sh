@@ -87,11 +87,11 @@ wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder
 # Download example htpasswd file
 echo "Downloading example htpasswd file to /etc/nginx/auth"
 cd /usr/local/openresty/nginx/auth
-wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/conf/htpasswd
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/auth/htpasswd
 
 echo "Setting up init.d script"
 cd /etc/init.d
-wget --quiet --no-check-certificate https://gist.githubusercontent.com/vdel26/8805927/raw/nginx
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/init/nginx
 chmod 755 nginx
 
 echo "Starting nginx"
