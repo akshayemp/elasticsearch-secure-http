@@ -35,6 +35,9 @@ curl -XDELETE user:password@localhost:8080/monitor-1234
 ## Users and groups
 By default all users have the password "password". Please see the htpasswd file for users. 
 The Lua script defines which users (as defined in the htpasswd file) belong to each group. Each group is only allowed certain permissions. Please edit the htpasswd file and the lua script to alter the user definitions or the group permissions.
+## Kibana
+If you have installed Kibana, it will be accessible from http://admin@localhost:8080/kibana4
+This address is redirected to the default Kibana port of 5601, if you have permission.
 # Testing
 You can run the shell script in the test directory to run some simple unit tests agains the server.
 # Acknowledgements
