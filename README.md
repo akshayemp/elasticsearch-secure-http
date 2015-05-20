@@ -37,3 +37,5 @@ By default all users have the password "password". Please see the htpasswd file 
 The Lua script defines which users (as defined in the htpasswd file) belong to each group. Each group is only allowed certain permissions. Please edit the htpasswd file and the lua script to alter the user definitions or the group permissions.
 # Testing
 You can run the shell script in the test directory to run some simple unit tests agains the server.
+# Acknowledgements
+Sponsored by IVZ, Berlin.
