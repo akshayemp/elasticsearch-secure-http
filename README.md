@@ -40,5 +40,3 @@ If you have installed Kibana, it will be accessible from http://admin@localhost:
 This address is redirected to the default Kibana port of 5601, if you have permission.
 # Testing
 You can run the shell script in the test directory to run some simple unit tests agains the server.
-# Acknowledgements
-Sponsored by IVZ, Berlin.
