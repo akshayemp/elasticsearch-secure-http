@@ -23,7 +23,7 @@ tar -xf elasticsearch-1.5.2.tar.gz
 mkdir /usr/share/elasticsearch
 mv elasticsearch-1.5.2/* /usr/share/elasticsearch
 chown vagrant /usr/share/elasticsearch
-wget --quiet --no-check-certificate https://gist.githubusercontent.com/philwinder/09fcc5dc3a0f60979b3f/raw/elasticsearch
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/init/elasticsearch 
 mv elasticsearch /etc/init.d
 chmod +x /etc/init.d/elasticsearch
 chkconfig --add elasticsearch
@@ -81,13 +81,13 @@ mkdir -p /usr/local/openresty/nginx/auth
 # Download confs
 echo "Downloading nginx and lua conf to /usr/local/openresty/nginx/conf"
 cd /usr/local/openresty/nginx/conf
-wget --quiet --no-check-certificate https://gist.githubusercontent.com/philwinder/5ec7628c6687794029b3/raw/nginx_authorize_by_lua.conf --output-document=nginx.conf
-wget --quiet --no-check-certificate https://gist.githubusercontent.com/philwinder/5ec7628c6687794029b3/raw/authorize.lua
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/conf/nginx_authorize_by_lua.conf --output-document=nginx.conf
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/conf/authorize.lua
 
 # Download example htpasswd file
 echo "Downloading example htpasswd file to /etc/nginx/auth"
 cd /usr/local/openresty/nginx/auth
-wget --quiet --no-check-certificate https://gist.githubusercontent.com/philwinder/5ec7628c6687794029b3/raw/htpasswd
+wget --quiet --no-check-certificate https://raw.githubusercontent.com/philwinder/elasticsearch-secure-http/master/conf/htpasswd
 
 echo "Setting up init.d script"
 cd /etc/init.d
