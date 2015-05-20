@@ -29,18 +29,17 @@ local userGroups = {
 local restrictions = {
   user = {
 	["^/monitor*"]			= { "HEAD", "GET" },
-	["^/kibana4*"]			= { "HEAD", "GET" }
+	["^/kibana4*"]			= { "HEAD", "GET", "PUT", "POST"  } -- Note: I believe you may need more permissions than this to use Kibana. Todo.
   },
   
   dev = {
 	["^/monitor*"]			= { "HEAD", "GET", "PUT", "POST" },
 	["^/log*"]			= { "HEAD", "GET", "PUT", "POST" },
-	["^/kibana4*"]			= { "HEAD", "GET" }
+	["^/kibana4*"]			= { "HEAD", "GET", "PUT", "POST"  }
   },
 
   admin = {
-  	["^/*"]               		= { "HEAD", "GET", "POST", "PUT", "DELETE" },
-	["^/kibana4*"]			= { "HEAD", "GET" }
+  	["^/*"]               		= { "HEAD", "GET", "POST", "PUT", "DELETE" }
   },
 
   adminOfLogs = {
