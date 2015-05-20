@@ -9,7 +9,8 @@ This project will create a vagrant virtual machine running the following:
 - Nginx
 - Lua
 - Kibana (optional)
-# Prerequisits
+
+# Prerequisites
 Please install vagrant from: http://www.vagrantup.com/downloads
 # Installation
 To install, clone the repository, then run vagrant.
